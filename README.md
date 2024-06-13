@@ -2,7 +2,8 @@
 
 This is a starter template [tauri](https://tauri.app/) + [VUE.js 3](https://vuejs.org/) + [VITE](https://vitejs.dev/).  
 It will create a local app with Rust as backend and VITE + VUE3 as front-end.
-It is not unlike electron...
+
+Don't install ANY Vue router, it will not work with Tauri, instead use `App.vue` directly.
 
 ## Whats new
 
@@ -13,7 +14,7 @@ It is not unlike electron...
 - Auto import icons
 - Support for theme changer
 - Installed iconify-json to work offline: bxs, fluent, ic, mdi, noto
-- Use webview instead of Chrome engine
+- Test dialog
 
 Check `vite.config.js`.
 
@@ -29,8 +30,6 @@ Copy this repo and install dependencies with `yarn`.
 yarn
 ```
 
-Also read how to [mocking Tauri APIs](https://tauri.app/v1/guides/testing/mocking)
-
 ### Develop front-end
 
 Run `yarn tauri dev` to start the front-end.
@@ -38,6 +37,8 @@ Run `yarn tauri dev` to start the front-end.
 ```cmd
 yarn tauri dev
 ```
+
+Also read how to [mocking Tauri APIs](https://tauri.app/v1/guides/testing/mocking)
 
 ### Building the full app
 
@@ -47,8 +48,8 @@ This will build the front-end and then the app as one `.exe` file.
 yarn tauri build
 ```
 
-Build location is in `src-tauri/target/release`.
-For the bundle installer in `src-tauri/target/release/bundle`
+Build location is in `src-tauri/target/release`.  
+For the bundle installer in `src-tauri/target/release/bundle`.
 
 # Tauri + Vue + TypeScript
 
