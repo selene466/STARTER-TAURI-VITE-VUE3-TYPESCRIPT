@@ -16,7 +16,7 @@ Don't install ANY Vue router, it will not work with Tauri, instead use `App.vue`
 - Installed iconify-json to work offline: bxs, fluent, ic, mdi, noto
 - Test dialog
 
-Check `vite.config.js`.
+Check `vite.config.cjs`.
 
 ## Start a new app
 
