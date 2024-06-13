@@ -1,9 +1,9 @@
 [package]
-name = "starter-vite-vue3-typescript-tauri"
+name = "starter-tauri-vite-vue3-typescript"
 version = "0.0.0"
 description = "A Tauri App"
-authors = ["you"]
-edition = "2021"
+authors = ["selene466"]
+edition = "2024"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -11,7 +11,7 @@ edition = "2021"
 tauri-build = { version = "1", features = [] }
 
 [dependencies]
-tauri = { version = "1", features = ["shell-open"] }
+tauri = { version = "1", features = [ "dialog-all", "fs-all", "window-set-min-size", "clipboard-all", "window-unminimize", "window-set-minimizable", "window-set-max-size", "window-minimize", "window-maximize", "window-create", "window-set-maximizable", "window-set-closable", "window-set-fullscreen", "window-center", "window-set-size", "window-unmaximize", "shell-open"] }
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 

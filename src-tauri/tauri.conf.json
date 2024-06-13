@@ -1,12 +1,13 @@
 {
   "build": {
+    "withGlobalTauri": true,
     "beforeDevCommand": "yarn dev",
     "beforeBuildCommand": "yarn build",
     "devPath": "http://localhost:1420",
     "distDir": "../dist"
   },
   "package": {
-    "productName": "starter-vite-vue3-typescript-tauri",
+    "productName": "starter-tauri-vite-vue3-typescript",
     "version": "0.0.0"
   },
   "tauri": {
@@ -15,13 +16,60 @@
       "shell": {
         "all": false,
         "open": true
+      },
+      "dialog": {
+        "all": true,
+        "ask": true,
+        "confirm": true,
+        "message": true,
+        "open": true,
+        "save": true
+      },
+      "fs": {
+        "all": true,
+        "scope": ["$APPDATA/files/*"],
+        "readFile": true,
+        "writeFile": true,
+        "readDir": true,
+        "copyFile": true,
+        "createDir": true,
+        "removeDir": true,
+        "removeFile": true,
+        "renameFile": true,
+        "exists": true
+      },
+      "clipboard": {
+        "all": true,
+        "writeText": true,
+        "readText": true
+      },
+      "window": {
+        "all": false,
+        "create": true,
+        "setResizable": false,
+        "center": true,
+        "setSize": true,
+        "setMinSize": true,
+        "setMaxSize": true,
+        "setFullscreen": true,
+        "setMaximizable": true,
+        "setMinimizable": true,
+        "setClosable": true,
+        "maximize": true,
+        "unmaximize": true,
+        "minimize": true,
+        "unminimize": true
       }
     },
     "windows": [
       {
-        "title": "starter-vite-vue3-typescript-tauri",
+        "title": "starter-tauri-vite-vue3-typescript",
         "width": 800,
-        "height": 600
+        "height": 600,
+        "minWidth": 800,
+        "minHeight": 600,
+        "resizable": true,
+        "center": true
       }
     ],
     "security": {
@@ -30,7 +78,7 @@
     "bundle": {
       "active": true,
       "targets": "all",
-      "identifier": "com.tauri.dev",
+      "identifier": "com.selene466.starter-tauri-vite-vue3-typescript-tauri.dev",
       "icon": [
         "icons/32x32.png",
         "icons/128x128.png",
